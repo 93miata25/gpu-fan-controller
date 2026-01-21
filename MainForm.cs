@@ -104,14 +104,7 @@ namespace GPUFanController
         {
             try
             {
-                // Set your Google Drive direct link here
-                // To get direct link: Share file → Anyone with the link → Copy link
-                // Then convert: https://drive.google.com/file/d/FILE_ID/view?usp=sharing
-                // To: https://drive.google.com/uc?export=download&id=FILE_ID
-                
-                string updateUrl = "https://gpufancontroller.com/version.json";
-                
-                UpdateChecker.SetUpdateUrl(updateUrl);
+                // Check for updates from GitHub releases
                 var updateInfo = await UpdateChecker.CheckForUpdatesAsync();
 
                 if (updateInfo != null)
