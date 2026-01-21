@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Link Test - GPU Fan Controller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .download-link {
+            display: block;
+            padding: 15px;
+            margin: 10px 0;
+            background: #0ea5e9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .download-link:hover {
+            background: #0284c7;
+        }
+        .info {
+            background: #fffbeb;
+            padding: 10px;
+            border-left: 4px solid #f59e0b;
+            margin: 10px 0;
+        }
+        .success {
+            background: #f0fdf4;
+            padding: 10px;
+            border-left: 4px solid #22c55e;
+            margin: 10px 0;
+        }
+        .error {
+            background: #fef2f2;
+            padding: 10px;
+            border-left: 4px solid #ef4444;
+            margin: 10px 0;
+        }
+        code {
+            background: #e5e7eb;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Download Link Tester</h1>
+    
+    <div class="info">
+        <strong>Purpose:</strong> This page tests different download link formats to diagnose the issue.
+        Try each link below and see which one works.
+    </div>
+
+    <div class="test-section">
+        <h2>Test 1: Relative Path (Current Method)</h2>
+        <p>This is what's currently in index.html</p>
+        <a href="installer_output/linux/GPUFanController-2.3.1-linux-x64.zip" class="download-link" download>
+            🐧 Download Linux Package (Relative Path)
+        </a>
+        <p><code>href="installer_output/linux/GPUFanController-2.3.1-linux-x64.zip"</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Absolute Path from Root</h2>
+        <p>For web servers with root directory access</p>
+        <a href="/installer_output/linux/GPUFanController-2.3.1-linux-x64.zip" class="download-link" download>
+            🐧 Download Linux Package (Absolute Path)
+        </a>
+        <p><code>href="/installer_output/linux/GPUFanController-2.3.1-linux-x64.zip"</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Direct File Reference</h2>
+        <p>If file is moved to same directory as HTML</p>
+        <a href="GPUFanController-2.3.1-linux-x64.zip" class="download-link" download>
+            🐧 Download Linux Package (Direct)
+        </a>
+        <p><code>href="GPUFanController-2.3.1-linux-x64.zip"</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Current Directory Check</h2>
+        <p>Also test the Windows download to compare:</p>
+        <a href="GPUFanController_Setup_v2.3.1.exe" class="download-link" download>
+            🪟 Download Windows Package (for comparison)
+        </a>
+        <p><code>href="GPUFanController_Setup_v2.3.1.exe"</code></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Diagnostics</h2>
+        <p><strong>Current Page URL:</strong></p>
+        <p><code id="current-url"></code></p>
+        
+        <p><strong>Constructed Linux Download URL:</strong></p>
+        <p><code id="linux-url"></code></p>
+        
+        <p><strong>File Protocol Detection:</strong></p>
+        <p><code id="protocol"></code></p>
+    </div>
+
+    <div class="success">
+        <strong>✅ If Test 1 works:</strong> Your current setup is correct. The issue might be browser-specific or the file wasn't uploaded to the server.
+    </div>
+
+    <div class="info">
+        <strong>⚠️ If Test 2 works:</strong> Use absolute paths in your index.html links.
+    </div>
+
+    <div class="error">
+        <strong>❌ If none work:</strong> Check that the file exists and the directory structure is correct on your server.
+    </div>
+
+    <div class="test-section">
+        <h2>Manual Verification</h2>
+        <p>Try accessing the file directly by copying this URL into your browser:</p>
+        <p><code id="direct-link"></code></p>
+        <button onclick="copyDirectLink()" style="padding: 10px; background: #0ea5e9; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            📋 Copy Direct Link
+        </button>
+    </div>
+
+    <script>
+        // Display diagnostic information
+        document.getElementById('current-url').textContent = window.location.href;
+        
+        const baseUrl = window.location.href.replace(/test-downloads\.html$/, '');
+        const linuxUrl = baseUrl + 'installer_output/linux/GPUFanController-2.3.1-linux-x64.zip';
+        document.getElementById('linux-url').textContent = linuxUrl;
+        document.getElementById('direct-link').textContent = linuxUrl;
+        
+        document.getElementById('protocol').textContent = window.location.protocol + ' (file:// = local, http/https = server)';
+        
+        function copyDirectLink() {
+            const link = document.getElementById('direct-link').textContent;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('Link copied to clipboard!');
+            }).catch(() => {
+                alert('Failed to copy. Link is: ' + link);
+            });
+        }
+
+        // Test if files exist (only works on same origin)
+        function testFileExists(url, elementId) {
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('✅ File exists:', url);
+                    } else {
+                        console.log('❌ File not found:', url, 'Status:', response.status);
+                    }
+                })
+                .catch(error => {
+                    console.log('⚠️ Cannot verify file (CORS or local file):', url);
+                });
+        }
+    </script>
+</body>
+</html>

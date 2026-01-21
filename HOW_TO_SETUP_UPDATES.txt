@@ -1,0 +1,245 @@
+================================================================================
+                   HOW TO SETUP AUTO-UPDATE SYSTEM
+================================================================================
+
+Your app now has auto-update checking! Here's how to set it up:
+
+================================================================================
+STEP 1: PREPARE VERSION FILE
+================================================================================
+
+The app checks a file called "version.json" to see if updates are available.
+
+Edit the included "version.json" file:
+
+{
+  "Version": "2.1.0",                    ← Change this for each update
+  "DownloadUrl": "https://...",          ← Link to your installer
+  "ReleaseNotes": "• Bug fixes\n...",    ← What's new
+  "ReleaseDate": "2026-01-20",           ← Release date
+  "IsCritical": false                    ← true = urgent update
+}
+
+================================================================================
+STEP 2: UPLOAD TO GOOGLE DRIVE
+================================================================================
+
+A) Upload version.json:
+   1. Go to Google Drive
+   2. Upload version.json
+   3. Right-click → Share → Anyone with the link can view
+   4. Copy the link
+
+B) Convert to direct download link:
+   
+   Google Drive gives you:
+   https://drive.google.com/file/d/1ABC123XYZ/view?usp=sharing
+   
+   Convert to:
+   https://drive.google.com/uc?export=download&id=1ABC123XYZ
+   
+   (Just replace "/file/d/" with "/uc?export=download&id="
+    and remove "/view?usp=sharing")
+
+================================================================================
+STEP 3: UPDATE THE CODE
+================================================================================
+
+Edit MainForm.cs, find this line (around line 70):
+
+string updateUrl = ""; // You'll set this later
+
+Change to:
+
+string updateUrl = "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID";
+
+Then rebuild: build-everything.bat
+
+================================================================================
+STEP 4: UPLOAD YOUR INSTALLER
+================================================================================
+
+When you make an update:
+
+1. Build new version
+2. Upload installer to Google Drive
+3. Share → Anyone with the link
+4. Copy link and convert to direct download
+5. Update version.json with:
+   - New version number (e.g., 2.1.0)
+   - New download URL
+   - Release notes
+6. Re-upload version.json to Google Drive
+
+================================================================================
+HOW IT WORKS
+================================================================================
+
+1. App starts → Waits 3 seconds → Checks for updates
+2. Downloads version.json from your Google Drive
+3. Compares version number with current version
+4. If newer version available:
+   - Shows balloon notification in tray
+   - Shows update dialog with release notes
+   - User clicks "Yes" → Opens download link
+5. If no update or error, silently continues
+
+================================================================================
+VERSION NUMBERING
+================================================================================
+
+Use format: MAJOR.MINOR.PATCH
+
+Examples:
+- 2.0.0 → 2.0.1 (bug fix, small update)
+- 2.0.0 → 2.1.0 (new features)
+- 2.0.0 → 3.0.0 (major changes)
+
+The app automatically compares these numbers.
+
+================================================================================
+CRITICAL UPDATES
+================================================================================
+
+Set "IsCritical": true in version.json for urgent updates.
+
+This shows:
+- ⚠️ Warning icon instead of info
+- "This is a critical update!" message
+- More prominent notification
+
+Use for:
+- Security fixes
+- Major bugs
+- Breaking changes
+
+================================================================================
+EXAMPLE WORKFLOW
+================================================================================
+
+You release version 2.1.0:
+
+1. Make changes to code
+2. Update CurrentVersion in UpdateChecker.cs:
+   public static readonly string CurrentVersion = "2.1.0";
+
+3. Build: build-everything.bat
+
+4. Upload installer to Google Drive:
+   GPUFanController_Setup_v2.1.0.exe
+
+5. Get direct download link:
+   https://drive.google.com/uc?export=download&id=NEW_FILE_ID
+
+6. Update version.json:
+   {
+     "Version": "2.1.0",
+     "DownloadUrl": "https://drive.google.com/uc?export=download&id=NEW_FILE_ID",
+     "ReleaseNotes": "• Fixed temperature display bug\n• Improved tray icon\n• Added new features",
+     "ReleaseDate": "2026-01-20",
+     "IsCritical": false
+   }
+
+7. Re-upload version.json to Google Drive (overwrite old one)
+
+8. Done! Users will be notified next time they open the app
+
+================================================================================
+TESTING
+================================================================================
+
+To test the update system:
+
+1. Set version.json to version "2.1.0"
+2. Upload to Google Drive
+3. Set update URL in code
+4. Build with version "2.0.0" in UpdateChecker.cs
+5. Run app
+6. After 3 seconds, you should see update notification
+
+================================================================================
+MANUAL UPDATE CHECK
+================================================================================
+
+Users can also manually check:
+- Click "🔄 Check Update" button in Settings section
+
+This immediately checks for updates.
+
+================================================================================
+DISABLING AUTO-CHECK
+================================================================================
+
+To disable auto-update checking:
+
+In MainForm.cs, comment out this line:
+
+// await CheckForUpdates();
+
+Users can still manually check with the button.
+
+================================================================================
+ALTERNATIVE: GITHUB RELEASES
+================================================================================
+
+Instead of Google Drive, you can use GitHub Releases:
+
+1. Create GitHub repository
+2. Create Release with tag (e.g., v2.1.0)
+3. Upload installer and version.json
+4. Get raw URL for version.json:
+   https://raw.githubusercontent.com/username/repo/main/version.json
+
+5. Use that URL in the code
+
+Benefits:
+- Free hosting
+- Version control
+- Professional
+- Reliable
+
+================================================================================
+TIPS
+================================================================================
+
+✅ Always test update before releasing
+✅ Keep version.json file small (fast download)
+✅ Use clear release notes
+✅ Increment version logically
+✅ Mark critical updates appropriately
+✅ Test download link before updating version.json
+
+❌ Don't change version.json URL (users won't get updates)
+❌ Don't use shortened URLs (may break)
+❌ Don't make version.json private
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Update check not working?
+
+1. Verify version.json is publicly accessible
+2. Test direct download link in browser
+3. Check version number format (X.Y.Z)
+4. Make sure updateUrl is set in code
+5. Rebuild after changing code
+6. Check internet connection
+
+================================================================================
+YOUR CURRENT SETUP
+================================================================================
+
+Current Version: 2.0.0 (in UpdateChecker.cs)
+Update URL: Not set (needs configuration)
+Version File: version.json (template included)
+
+TO DO:
+1. Upload version.json to Google Drive
+2. Get direct download link
+3. Set updateUrl in MainForm.cs
+4. Rebuild app
+
+Then you're ready to notify users of updates!
+
+================================================================================

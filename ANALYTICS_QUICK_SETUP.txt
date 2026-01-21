@@ -1,0 +1,128 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║              ANALYTICS QUICK SETUP - 3 SIMPLE STEPS               ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+STEP 1: GET YOUR GOOGLE ANALYTICS ID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Visit: https://analytics.google.com/
+2. Sign in with your Google account
+3. Click "Admin" (gear icon in bottom left)
+4. Click "Create Property"
+5. Fill in property details:
+   - Property name: "GPU Fan Controller"
+   - Time zone: Your time zone
+   - Currency: Your currency
+6. Click "Next" → "Create"
+7. Copy your Measurement ID (format: G-XXXXXXXXXX)
+   Example: G-ABC123DEF4
+
+STEP 2: UPDATE index.html
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open index.html and find TWO locations with "G-XXXXXXXXXX":
+
+Location 1 (around line 752):
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+   
+   Replace with YOUR ID:
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123DEF4"></script>
+
+Location 2 (around line 759):
+   gtag('config', 'G-XXXXXXXXXX', {
+   
+   Replace with YOUR ID:
+   gtag('config', 'G-ABC123DEF4', {
+
+Save the file!
+
+STEP 3: TEST & DEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Testing:
+1. Open index.html in your browser
+2. Press F12 to open Developer Tools
+3. Go to Console tab
+4. Click any download button
+5. You should see: "Download tracked: Windows GPUFanController_Setup_v2.3.1.exe"
+
+Verify in Google Analytics:
+1. Go to Google Analytics
+2. Click "Reports" → "Realtime" → "Overview"
+3. Click a download button on your site
+4. Within 30 seconds, you should see the event appear!
+
+Deploy:
+1. Upload index.html to your web server
+2. Done! Analytics are now live.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT'S BEING TRACKED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Windows download button clicks
+✓ Linux download button clicks  
+✓ Header "Download Now" button clicks
+✓ Platform, file name, and file size for each download
+✓ Geographic location (built-in to Google Analytics)
+✓ Device type (desktop/mobile/tablet)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VIEW YOUR DATA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+In Google Analytics:
+
+→ Real-Time Data (immediate):
+  Reports → Realtime → Events
+  Look for "download" events
+
+→ Historical Data (next day):
+  Reports → Engagement → Events
+  Find "download" and click for details
+
+→ Platform Breakdown:
+  Click on "download" event
+  Look at "event_label" dimension
+  Shows: Windows, Linux, Header CTA
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Console shows "Download tracked" but nothing in GA
+Solution: Wait 24-48 hours for historical reports. Use Real-Time for instant verification.
+
+Problem: Nothing shows in console
+Solution: Check that you saved index.html after editing. Refresh browser (Ctrl+F5).
+
+Problem: Script error in console
+Solution: Verify you replaced BOTH instances of G-XXXXXXXXXX.
+
+Problem: Ad blocker interfering
+Solution: Disable ad blocker when testing, or use fallback analytics (see ANALYTICS_GUIDE.md).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PRIVACY & COMPLIANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Anonymous tracking (no personal data)
+✓ No user identification
+✓ Respects "Do Not Track" browser settings
+✓ GDPR-friendly (consider adding cookie banner for EU)
+
+For full privacy compliance guide, see ANALYTICS_GUIDE.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 Full Documentation: ANALYTICS_GUIDE.md
+🌐 Google Analytics Help: https://support.google.com/analytics
+🎯 GA4 Setup Guide: https://support.google.com/analytics/answer/9304153
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+That's it! Your download tracking is ready to go. 🎉

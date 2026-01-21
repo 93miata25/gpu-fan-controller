@@ -1,0 +1,13 @@
+{
+  "Version": "2.3.2",
+  "DownloadUrlWindows": "https://gpufancontroller.com/GPUFanController_Setup_v2.3.2.exe",
+  "DownloadUrlLinux": "https://gpufancontroller.com/gpu-fan-controller-2.3.2-linux-x64.tar.gz",
+  "DownloadUrl": "https://gpufancontroller.com/GPUFanController_Setup_v2.3.2.exe",
+  "ReleaseNotes": "• NEW: Analytics tracking with app_heartbeat events\n• FIXED: Start with Windows now works properly on reboot\n• Application correctly handles -minimized command-line argument\n• Start minimized option now functions as expected\n• Improved startup behavior when launched automatically",
+  "ReleaseDate": "2026-01-20",
+  "IsCritical": false,
+  "Analytics": {
+    "MeasurementId": "G-NMNS09L9FJ",
+    "ApiSecret": "0YpvAQeEQX-zZMCwc7qKpw"
+  }
+}
