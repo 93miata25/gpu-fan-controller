@@ -4,9 +4,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-green.svg)]()
 [![.NET](https://img.shields.io/badge/.NET-6.0-purple.svg)](https://dotnet.microsoft.com/download/dotnet/6.0)
 
-A powerful, open-source GPU fan controller with automatic temperature-based fan curves, multi-GPU support, and both GUI (Windows) and console (Linux/Windows) interfaces.
-
-![GPU Fan Controller](gpu_fan_controller_screenshot.png)
+A powerful, open-source GPU fan controller with automatic temperature-based fan curves, multi-GPU support, (Linux/Windows) interfaces.
 
 ---
 
@@ -34,8 +32,7 @@ A powerful, open-source GPU fan controller with automatic temperature-based fan 
 - Current fan speed percentage
 - Auto-refresh every 2 seconds
 
-### 🖥️ Two Interfaces
-- **GUI Version** (Windows): Beautiful, modern interface
+### 🖥️ Interfaces
 - **Console Version** (Windows/Linux): Lightweight terminal interface
 
 ### 🛡️ Safety Features
@@ -50,9 +47,8 @@ A powerful, open-source GPU fan controller with automatic temperature-based fan 
 
 ### Windows (GUI)
 
-1. **Download** the latest release from [Releases](https://github.com/yourusername/gpu-fan-controller/releases)
-2. **Run installer**: `GPUFanController_Setup.exe`
-3. **Launch** from Start Menu or Desktop
+1. **Run installer**: `GPUFanController_Setup.exe`
+2. **Launch** from Start Menu or Desktop
 
 ### Windows/Linux (Console)
 
