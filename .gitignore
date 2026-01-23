@@ -45,3 +45,41 @@ tmp_rovodev_*
 *.env
 set-analytics-env.bat
 !.env.example
+
+# Built installers and output directories
+installer_output/
+*.exe
+*.msi
+*.deb
+*.rpm
+*.AppImage
+*.tar.gz
+*.zip
+
+# Personal development notes and guides
+*_NOTES.txt
+*_NOTES.md
+START_HERE.*
+READY_TO_BUILD.*
+SIGNPATH_*
+HOW_TO_*.txt
+QUICK_*.txt
+*_SUMMARY.txt
+*_SUMMARY.md
+*_GUIDE.txt
+FINAL_*.txt
+
+# Test and run scripts (keep build scripts)
+run.bat
+run-console.bat
+TEST_*.bat
+publish.bat
+publish-console.bat
+test-*.html
+
+# Web files (should be in separate repo/branch)
+index.html
+landing-page.html
+favicon*.png
+favicon.ico
+apple-touch-icon.png
