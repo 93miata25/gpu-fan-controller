@@ -4,9 +4,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-green.svg)]()
 [![.NET](https://img.shields.io/badge/.NET-6.0-purple.svg)](https://dotnet.microsoft.com/download/dotnet/6.0)
 
-A powerful, open-source GPU fan controller with automatic temperature-based fan curves, multi-GPU support, and both GUI (Windows) and console (Linux/Windows) interfaces.
-
-![GPU Fan Controller](gpu_fan_controller_screenshot.png)
+A powerful, open-source GPU fan controller with automatic temperature-based fan curves, multi-GPU support, (Linux/Windows) interfaces.
 
 ---
 
