@@ -92,7 +92,7 @@ echo SUCCESS! Installer created successfully!
 echo ===============================================
 echo.
 echo Installer location:
-echo   installer_output\GPUFanController_Setup_v2.0.exe
+echo   installer_output\GPUFanController_Setup_v2.3.2.exe
 echo.
 echo You can now distribute this installer to users.
 echo Double-click the installer to test installation.

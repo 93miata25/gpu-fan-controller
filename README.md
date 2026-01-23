@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-green.svg)]()
 [![.NET](https://img.shields.io/badge/.NET-6.0-purple.svg)](https://dotnet.microsoft.com/download/dotnet/6.0)
 
-A powerful, open-source GPU fan controller with automatic temperature-based fan curves, multi-GPU support, (Linux/Windows) interfaces.
+A powerful, open-source GPU fan controller with automatic temperature-based fan curves, multi-GPU support, GUI (Windows) and Console (Linux/Windows) interfaces.
 
 ---
 
@@ -33,6 +33,7 @@ A powerful, open-source GPU fan controller with automatic temperature-based fan 
 - Auto-refresh every 2 seconds
 
 ### 🖥️ Interfaces
+- **GUI Version** (Windows): Full-featured Windows Forms application with system tray support
 - **Console Version** (Windows/Linux): Lightweight terminal interface
 
 ### 🛡️ Safety Features
@@ -395,18 +396,18 @@ Thanks to all the open-source GPU monitoring and control projects that inspired 
 
 ## 📞 Support
 
-- 📖 [Documentation & Guides](docs/)
 - 🐛 [Issue Tracker](https://github.com/93miata25/gpu-fan-controller/issues)
 - 💬 [Discussions](https://github.com/93miata25/gpu-fan-controller/discussions)
+- 📖 [Installation Guides](INSTALL_WINDOWS.md) | [Linux Guide](INSTALL_LINUX.md)
+- 🚀 [Quick Start](QUICKSTART.md) | [Features](FEATURES.md)
 
 ---
 
 ## 🔗 Links
 
-- **Website**: https://gpufancontroller.com
-- **Documentation**: [Full docs](docs/)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 - **Releases**: [Latest version](https://github.com/93miata25/gpu-fan-controller/releases)
+- **Contributing**: [CONTRIBUTING.md](CONTRIBUTING.md)
+- **License**: [MIT License](LICENSE)
 
 ---
 

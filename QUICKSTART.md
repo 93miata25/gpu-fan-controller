@@ -2,10 +2,10 @@
 
 ## 🎁 For End Users (Using Installer)
 
-**If you have the installer file (GPUFanController_Setup_v2.0.exe):**
+**If you have the installer file (GPUFanController_Setup_v2.3.2.exe):**
 
 ### Installation (30 seconds)
-1. **Double-click** `GPUFanController_Setup_v2.0.exe`
+1. **Double-click** `GPUFanController_Setup_v2.3.2.exe`
 2. Click **"Yes"** on UAC prompt (needs admin rights)
 3. Click **"Next"** through the wizard
 4. Choose if you want desktop shortcuts (optional)

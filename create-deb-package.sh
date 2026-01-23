@@ -42,7 +42,7 @@ chmod +x "$PKG_DIR/opt/gpufancontroller/GPUFanControllerConsole"
 # Copy documentation
 echo "Copying documentation..."
 cp README.md "$PKG_DIR/usr/share/doc/gpufancontroller/" 2>/dev/null || true
-cp LICENSE.txt "$PKG_DIR/usr/share/doc/gpufancontroller/copyright" 2>/dev/null || true
+cp LICENSE "$PKG_DIR/usr/share/doc/gpufancontroller/copyright" 2>/dev/null || true
 cp QUICKSTART.md "$PKG_DIR/usr/share/doc/gpufancontroller/" 2>/dev/null || true
 
 # Create systemd service file

@@ -69,8 +69,8 @@ sudo -u "$ACTUAL_USER" mkdir -p "$CONFIG_DIR"
 if [ -f "README.md" ]; then
     cp README.md "$INSTALL_DIR/" 2>/dev/null || true
 fi
-if [ -f "LICENSE.txt" ]; then
-    cp LICENSE.txt "$INSTALL_DIR/" 2>/dev/null || true
+if [ -f "LICENSE" ]; then
+    cp LICENSE "$INSTALL_DIR/" 2>/dev/null || true
 fi
 
 # Create systemd service file (optional)

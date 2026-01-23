@@ -49,7 +49,7 @@ After installation completes:
 - README.md - Full documentation
 - FEATURES.md - Feature list
 - QUICKSTART.md - Quick start guide
-- PROJECT_SUMMARY.md - Project overview
+- README.md - Project overview and documentation
 
 ---
 

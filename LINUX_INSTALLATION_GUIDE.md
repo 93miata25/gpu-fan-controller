@@ -385,7 +385,7 @@ A: It may conflict. Disable other GPU fan control software when using this tool.
 
 ## License
 
-This project is licensed under the MIT License. See LICENSE.txt for details.
+This project is licensed under the MIT License. See LICENSE for details.
 
 ---
 

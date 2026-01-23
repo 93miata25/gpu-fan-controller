@@ -38,7 +38,7 @@ chmod +x "$TEMP_DIR/install.sh"
 # Copy documentation
 echo "Copying documentation..."
 cp README.md "$TEMP_DIR/" 2>/dev/null || true
-cp LICENSE.txt "$TEMP_DIR/" 2>/dev/null || true
+cp LICENSE "$TEMP_DIR/" 2>/dev/null || true
 cp QUICKSTART.md "$TEMP_DIR/" 2>/dev/null || true
 
 # Create Linux-specific README

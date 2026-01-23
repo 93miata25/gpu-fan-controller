@@ -20,7 +20,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=LICENSE.txt
+LicenseFile=LICENSE
 OutputDir=installer_output
 OutputBaseFilename=GPUFanController_Setup_v{#MyAppVersion}
 Compression=lzma
@@ -56,7 +56,7 @@ Source: "bin\Release\net6.0\win-x64\publish\*"; DestDir: "{app}\console"; Flags:
 Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "FEATURES.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "QUICKSTART.md"; DestDir: "{app}"; Flags: ignoreversion
-Source: "PROJECT_SUMMARY.md"; DestDir: "{app}"; Flags: ignoreversion
+; Source: "PROJECT_SUMMARY.md"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 ; Start Menu icons
