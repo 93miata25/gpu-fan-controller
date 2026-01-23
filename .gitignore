@@ -44,7 +44,14 @@ tmp_rovodev_*
 .env
 *.env
 set-analytics-env.bat
+set-analytics-env.ps1
 !.env.example
+
+# Analytics credentials (NEVER commit these!)
+*analytics*.bat
+*analytics*.ps1
+GA_MEASUREMENT_ID
+GA_API_SECRET
 
 # Built installers and output directories
 installer_output/

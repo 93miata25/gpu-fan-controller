@@ -66,7 +66,6 @@ sudo apt remove gpufancontroller
 |----------|---------|
 | [LINUX_INSTALLATION_GUIDE.md](LINUX_INSTALLATION_GUIDE.md) | Complete user guide |
 | [BUILD_LINUX_QUICK_START.md](BUILD_LINUX_QUICK_START.md) | Developer build guide |
-| [LINUX_BUILD_SUMMARY.md](LINUX_BUILD_SUMMARY.md) | Implementation details |
 
 ---
 

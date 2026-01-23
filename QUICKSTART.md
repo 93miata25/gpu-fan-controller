@@ -56,25 +56,14 @@ Right-click `run.bat` → Select **"Run as Administrator"**
    - Click "Apply" to set the speed
 4. Monitor temperature - keep it below 85°C
 
-### Create Standalone Executable
-
-If you want a single .exe file that works without .NET:
-
-1. Double-click `publish.bat`
-2. Find the executable at: `bin\Release\net6.0-windows\win-x64\publish\GPUFanController.exe`
-3. Copy this file anywhere you want
-4. Always right-click → "Run as Administrator"
-
 ### Create Windows Installer
 
 **Requires Inno Setup** (free): https://jrsoftware.org/isdl.php
 
 1. Install Inno Setup
 2. Double-click `build-installer.bat`
-3. Find installer at: `installer_output\GPUFanController_Setup_v2.0.exe`
+3. Find installer at: `installer_output\\GPUFanController_Setup_v2.x.x.exe`
 4. Distribute the installer to users!
-
-See `INSTALLER_GUIDE.md` for detailed instructions.
 
 ## Important Notes
 
