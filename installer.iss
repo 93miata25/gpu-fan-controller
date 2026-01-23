@@ -4,7 +4,7 @@
 #define MyAppName "GPU Fan Controller"
 #define MyAppVersion "2.3.2"
 #define MyAppPublisher "GPU Fan Controller"
-#define MyAppURL "https://github.com/yourusername/GPUFanController"
+#define MyAppURL "https://github.com/93miata25/gpu-fan-controller"
 #define MyAppExeName "GPUFanController.exe"
 #define MyAppExeNameConsole "GPUFanControllerConsole.exe"
 

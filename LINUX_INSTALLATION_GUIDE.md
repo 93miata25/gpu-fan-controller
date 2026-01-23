@@ -39,7 +39,7 @@ GPU Fan Controller is now available for Linux! This guide covers installation, u
 
 1. **Download the package**:
    ```bash
-   wget https://github.com/yourusername/GPUFanController/releases/download/v2.3.1/GPUFanController-2.3.1-linux-x64.tar.gz
+   wget https://github.com/93miata25/GPUFanController/releases/download/v2.3.1/GPUFanController-2.3.1-linux-x64.tar.gz
    ```
 
 2. **Extract**:
@@ -59,7 +59,7 @@ GPU Fan Controller is now available for Linux! This guide covers installation, u
 
 1. **Download the .deb package**:
    ```bash
-   wget https://github.com/yourusername/GPUFanController/releases/download/v2.3.1/gpufancontroller_2.3.1_amd64.deb
+   wget https://github.com/93miata25/GPUFanController/releases/download/v2.3.1/gpufancontroller_2.3.1_amd64.deb
    ```
 
 2. **Install**:
@@ -77,7 +77,7 @@ GPU Fan Controller is now available for Linux! This guide covers installation, u
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/GPUFanController.git
+   git clone https://github.com/93miata25/GPUFanController.git
    cd GPUFanController
    ```
 
@@ -377,9 +377,9 @@ A: It may conflict. Disable other GPU fan control software when using this tool.
 
 ## Support
 
-- **Issues**: https://github.com/yourusername/GPUFanController/issues
+- **Issues**: https://github.com/93miata25/GPUFanController/issues
 - **Documentation**: See README.md and FEATURES.md
-- **Discussions**: https://github.com/yourusername/GPUFanController/discussions
+- **Discussions**: https://github.com/93miata25/GPUFanController/discussions
 
 ---
 

@@ -266,7 +266,7 @@ Analytics help improve the app. Data is collected via Google Analytics 4.
 - Location: `C:\Program Files\GPU Fan Controller\`
 
 ### Online Resources
-- GitHub: https://github.com/yourusername/GPUFanController
+- GitHub: https://github.com/93miata25/GPUFanController
 - Issues: Report bugs via GitHub Issues
 
 ---

@@ -134,7 +134,7 @@ Configuration files are stored in:
 SUPPORT
 -------
 For issues, please visit:
-  https://github.com/yourusername/GPUFanController
+  https://github.com/93miata25/GPUFanController
 
 VERSION: 2.3.1
 EOF

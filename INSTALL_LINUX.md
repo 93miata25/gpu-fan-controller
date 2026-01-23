@@ -161,7 +161,7 @@ Or in the extracted package folder.
 ## Support
 
 For issues and questions:
-- GitHub: https://github.com/yourusername/GPUFanController
+- GitHub: https://github.com/93miata25/GPUFanController
 - Documentation: See included markdown files
 
 ---

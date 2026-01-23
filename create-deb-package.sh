@@ -73,7 +73,7 @@ Version: ${VERSION}
 Section: utils
 Priority: optional
 Architecture: ${ARCH}
-Maintainer: GPU Fan Controller <contact@example.com>
+Maintainer: GPU Fan Controller <gpufancontroller@gmail.com>
 Description: Advanced GPU fan control utility
  GPU Fan Controller is a powerful utility for controlling GPU fan speeds
  on Linux systems. It supports NVIDIA, AMD, and Intel GPUs.
@@ -86,7 +86,7 @@ Description: Advanced GPU fan control utility
   * Systemd service support
 Depends: libc6 (>= 2.31)
 Recommends: nvidia-driver-525 | amdgpu-dkms
-Homepage: https://github.com/yourusername/GPUFanController
+Homepage: https://github.com/93miata25/GPUFanController
 EOF
 
 # Create postinst script (runs after installation)

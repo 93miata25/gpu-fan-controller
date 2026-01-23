@@ -54,7 +54,7 @@ A powerful, open-source GPU fan controller with automatic temperature-based fan 
 
 ```bash
 # Download and extract
-wget https://github.com/yourusername/gpu-fan-controller/releases/latest/download/GPUFanController-Console-linux.tar.gz
+wget https://github.com/93miata25/gpu-fan-controller/releases/latest/download/GPUFanController-Console-linux.tar.gz
 tar -xzf GPUFanController-Console-linux.tar.gz
 
 # Run with sudo (required for hardware access)
@@ -75,7 +75,7 @@ sudo ./GPUFanControllerConsole
 
 ```batch
 # Clone repository
-git clone https://github.com/yourusername/gpu-fan-controller.git
+git clone https://github.com/93miata25/gpu-fan-controller.git
 cd gpu-fan-controller
 
 # Build GUI version
@@ -91,7 +91,7 @@ dotnet publish GPUFanControllerConsole.csproj -c Release -r win-x64 --self-conta
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/gpu-fan-controller.git
+git clone https://github.com/93miata25/gpu-fan-controller.git
 cd gpu-fan-controller
 
 # Build Console version (GUI not available on Linux)
@@ -305,7 +305,7 @@ Contributions are welcome! Here's how you can help:
 
 ### 🐛 Report Bugs
 
-[Open an issue](https://github.com/yourusername/gpu-fan-controller/issues) with:
+[Open an issue](https://github.com/93miata25/gpu-fan-controller/issues) with:
 - Your GPU model and driver version
 - Operating system
 - Steps to reproduce
@@ -313,7 +313,7 @@ Contributions are welcome! Here's how you can help:
 
 ### 💡 Suggest Features
 
-[Open an issue](https://github.com/yourusername/gpu-fan-controller/issues) with:
+[Open an issue](https://github.com/93miata25/gpu-fan-controller/issues) with:
 - Clear description of the feature
 - Why it would be useful
 - Possible implementation ideas
@@ -396,8 +396,8 @@ Thanks to all the open-source GPU monitoring and control projects that inspired 
 ## 📞 Support
 
 - 📖 [Documentation & Guides](docs/)
-- 🐛 [Issue Tracker](https://github.com/yourusername/gpu-fan-controller/issues)
-- 💬 [Discussions](https://github.com/yourusername/gpu-fan-controller/discussions)
+- 🐛 [Issue Tracker](https://github.com/93miata25/gpu-fan-controller/issues)
+- 💬 [Discussions](https://github.com/93miata25/gpu-fan-controller/discussions)
 
 ---
 
@@ -406,7 +406,7 @@ Thanks to all the open-source GPU monitoring and control projects that inspired 
 - **Website**: https://gpufancontroller.com
 - **Documentation**: [Full docs](docs/)
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md)
-- **Releases**: [Latest version](https://github.com/yourusername/gpu-fan-controller/releases)
+- **Releases**: [Latest version](https://github.com/93miata25/gpu-fan-controller/releases)
 
 ---
 

@@ -35,7 +35,7 @@ This document provides guidelines for contributing to the project. Following the
 ### 🐛 Reporting Bugs
 
 **Before submitting a bug report:**
-1. Check the [existing issues](https://github.com/yourusername/gpu-fan-controller/issues)
+1. Check the [existing issues](https://github.com/93miata25/gpu-fan-controller/issues)
 2. Update to the latest version
 3. Test with administrator/sudo privileges
 
@@ -381,7 +381,7 @@ We use [Semantic Versioning](https://semver.org/):
 
 ## 📞 Questions?
 
-- 💬 [Open a discussion](https://github.com/yourusername/gpu-fan-controller/discussions)
+- 💬 [Open a discussion](https://github.com/93miata25/gpu-fan-controller/discussions)
 - 📧 Contact maintainers
 - 📖 Check existing docs
 
