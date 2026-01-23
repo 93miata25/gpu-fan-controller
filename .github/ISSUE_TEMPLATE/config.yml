@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/93miata25/gpu-fan-controller/discussions
+    about: Ask questions, share tips, and discuss with the community
+  - name: 📧 Email Support
+    url: mailto:gpufancontroller@gmail.com
+    about: Contact us directly for private inquiries
+  - name: 🌐 Website
+    url: https://gpufancontroller.com
+    about: Visit our official website for downloads and documentation
+  - name: 📖 Documentation
+    url: https://github.com/93miata25/gpu-fan-controller#readme
+    about: Read the full documentation and guides
